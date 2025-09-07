@@ -1,24 +1,27 @@
 .tarjeta-global {
-  border: 2px solid;
-  border-radius: 12px;
+  border: 2px solid #ccc;
   padding: 16px;
-  margin: 12px 0;
-  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 12px 0;
 }
 
 .tarjeta-global:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
 
 .titulo-global {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: bold;
+  color: #04709e; /* se puede sobreescribir con inline style */
   margin-bottom: 8px;
 }
 
 .contenido-global {
   font-size: 1rem;
   color: #333;
+  line-height: 1.6;
 }
