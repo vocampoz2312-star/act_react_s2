@@ -10,22 +10,24 @@ export default function Page() {
         contenido="Este es el contenido de la tarjeta global."
         color="#04709e"
       />
-      <TarjetaGlobal
-        titulo="Otra tarjeta"
-        contenido="Contenido diferente, pero mismo estilo."
-        color="#04547e"
-      />
 
-      {/* Tarjetas con Módulos */}
       <TarjetaModulo
-        nombre="Tarjeta 2"
-        descripcion="Se crea una segunda tarjeta"
+        nombre="Curso React"
+        descripcion="Aprende React desde cero"
         categoria="Frontend"
+        variante="tarjetaPrimaria"
       />
       <TarjetaModulo
-        nombre="Tarjeta 3"
-        descripcion="Se crea una tercera tarjeta"
+        nombre="Curso Node.js"
+        descripcion="Construye APIs con Node.js y Express"
         categoria="Backend"
+        variante="tarjetaSecundaria"
+      />
+      <TarjetaModulo
+        nombre="Curso DevOps"
+        descripcion="Automatización y despliegues en la nube"
+        categoria="Infraestructura"
+        variante="tarjetaExito"
       />
     </main>
   );
