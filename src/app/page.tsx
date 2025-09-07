@@ -31,28 +31,22 @@ export default function Page() {
         variante="tarjetaExito"
       />
 
-      <TarjetaDinamica
-        titulo="Tarjeta Azul"
-        contenido="Esta tarjeta tiene fondo azul, texto blanco y 300px de ancho."
+     <TarjetaDinamica
+        titulo="Activa"
+        contenido="Esta tarjeta está en estado activo."
         colorFondo="#04709e"
         colorTexto="#ffffff"
-        ancho="300px"
+        ancho="320px"
+        activo={true}
       />
 
       <TarjetaDinamica
-        titulo="Tarjeta Verde"
-        contenido="Fondo verde claro, texto oscuro y ancho al 60%."
-        colorFondo="#c8e6c9"
-        colorTexto="#222222"
-        ancho="60%"
-      />
-
-      <TarjetaDinamica
-        titulo="Tarjeta Amarilla"
-        contenido="Fondo amarillo, texto negro y ancho completo."
-        colorFondo="#fff176"
-        colorTexto="#000000"
-        ancho="100%"
+        titulo="Inactiva"
+        contenido="Esta tarjeta está en estado inactivo."
+        colorFondo="#4caf50"
+        colorTexto="#ffffff"
+        ancho="320px"
+        activo={false}
       />
     </main>
   );

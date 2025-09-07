@@ -1,36 +1,34 @@
 "use client";
-
 import React from "react";
 
-export default function TarjetaDinamica({ titulo, contenido, colorFondo, colorTexto, ancho }) {
-  // Estilos dinámicos en objeto style
+export default function TarjetaDinamica({
+  titulo,
+  contenido,
+  colorFondo,
+  colorTexto,
+  ancho,
+  activo = false,
+}) {
   const estiloTarjeta = {
-    backgroundColor: colorFondo,
-    color: colorTexto,
+    backgroundColor: activo ? colorFondo : "#f0f0f0",
+    color: activo ? colorTexto : "#555",
     width: ancho,
     padding: "16px",
     margin: "12px auto",
     borderRadius: "12px",
-    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
-    transition: "transform 0.2s ease, box-shadow 0.2s ease",
+    border: activo ? "2px solid #222" : "1px solid #ccc",
+    boxShadow: activo
+      ? "0 6px 16px rgba(0, 0, 0, 0.25)"
+      : "0 2px 6px rgba(0, 0, 0, 0.1)",
+    transition: "all 0.3s ease",
     textAlign: "center",
-  };
-
-  const estiloTitulo = {
-    marginBottom: "8px",
-    fontSize: "1.4rem",
-    fontWeight: "bold",
-  };
-
-  const estiloContenido = {
-    fontSize: "1rem",
-    lineHeight: "1.5",
+    transform: activo ? "scale(1.02)" : "scale(1)",
   };
 
   return (
     <div style={estiloTarjeta}>
-      <h2 style={estiloTitulo}>{titulo}</h2>
-      <p style={estiloContenido}>{contenido}</p>
+      <h2>{titulo}</h2>
+      <p>{contenido}</p>
     </div>
   );
 }
