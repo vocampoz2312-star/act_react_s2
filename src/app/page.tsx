@@ -1,11 +1,11 @@
 import TarjetaGlobal from "./components/TarjetaGlobal";
 import TarjetaModulo from "./components/TarjetaModulo";
 import TarjetaDinamica from "./components/TarjetaDinamica";
+import TarjetaTailwind from "./components/TarjetaTailwind";
 
 export default function Page() {
   return (
-    <main style={{ padding: "20px" }}>
-      {/* Tarjetas Globales */}
+     <main className="flex flex-wrap gap-4 p-6 bg-gray-100 min-h-screen">
       <TarjetaGlobal
         titulo="Mi primera tarjeta"
         contenido="Este es el contenido de la tarjeta global."
@@ -47,6 +47,19 @@ export default function Page() {
         colorTexto="#ffffff"
         ancho="320px"
         activo={false}
+      />
+     
+      <TarjetaTailwind
+        titulo="Curso de React"
+        descripcion="Aprende a crear interfaces modernas con React y Tailwind."
+        imagen="https://placehold.co/300x200"
+        etiqueta="Frontend"
+      />
+      <TarjetaTailwind
+        titulo="Curso de Node.js"
+        descripcion="Construye APIs rápidas y escalables con Node.js."
+        imagen="https://placehold.co/300x200"
+        etiqueta="Backend"
       />
     </main>
   );
